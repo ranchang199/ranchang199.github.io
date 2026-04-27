@@ -1,33 +1,70 @@
-# Site settings   #站点设置
-title:       #站点设置#站点设置冉畅的博客
+# Site settings
+title: 冉畅的博客
 SEOTitle: 冉畅的博客 | 数据结构与算法
-header-img: img/home-bg.jpg页眉图片：img/home-bg.jpg
-email: 676379983@qq.com   电子邮件：676379983@qq.com
+header-img: img/home-bg.jpg
+email: 676379983@qq.com
 description: "这里是冉畅的个人博客，分享数据结构、算法与编程学习心得 | 专注于栈和队列的讲解"
-keyword: "冉畅, 数据结构, 算法, 栈, 队列, 编程, 技术博客, JavaScript, Python, C++
-url: "https://ranchang199.github.io" # ⚠️ 修改要点：替换成你自己的 GitHub Pages 域名
+keyword: "冉畅, 数据结构, 算法, 栈, 队列, 编程, 技术博客, JavaScript, Python, C++"
+url: "https://ranchang199.github.io"
 baseurl: ""
 
-# ... 中间的 Publish posts、Build settings、Markdown settings 保持不变 ...
+# Publish posts or collection documents with a future date.
+future: true
 
-# SNS settings   # SNS设置
-RSS: false   RSS:假
-weibo_username:      # 没有可以留空，但要保留这个字段
-zhihu_username:      # 没有可以留空，但要保留这个字段
-github_username: ranchang199   # ⚠️ 修改要点：替换成你自己的 GitHub 用户名
-twitter_username:    # 没有可以留空，但要保留这个字段
+# SNS settings
+RSS: false
+weibo_username: 
+zhihu_username: 
+github_username: ranchang199
+twitter_username: 
 
-# Disqus settings   #磁盘设置
-disqus_username:     # ⚠️ 修改要点：可以暂时留空，等注册了 Disqus 再填
+# Disqus settings
+disqus_username: 
 
-# Analytics settings   # 分析设置
-# 百度统计、Google Analytics 建议都先留空，或移除原有的追踪 ID
+# Analytics settings (百度统计、Google Analytics 先留空)
 
-# Sidebar settings   #侧边栏设置
+# Sidebar settings
 sidebar: true
 sidebar-about-description: "程序员冉畅 | 分享数据结构、栈与队列的底层实现与算法题解"
-# ⚠️ 修改要点：放一张正方形的头像图，例如放在 /img/ 目录下命名为 avatar-ranchang.jpg
 sidebar-avatar: /img/avatar-ranchang.jpg
 
 # Friends（友链）
-friends: []        # ⚠️ 修改要点：先把原来的全部清空，以后自己再加
+friends: []
+
+# Build settings
+highlighter: rouge
+permalink: pretty
+paginate: 10
+exclude:
+  - "less"
+  - "node_modules"
+  - "Gruntfile.js"
+  - "package.json"
+  - "README.md"
+  - "README.zh.md"
+anchorjs: true
+
+plugins:
+  - jekyll-paginate
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Featured Tags
+featured-tags: true
+featured-condition-size: 1
+
+# Progressive Web Apps
+chrome-tab-theme-color: "#000000"
+service-worker: true
+
+# MathJax
+page-mathjax: false
