@@ -1,102 +1,33 @@
-# Site settings
-title: RC Blog
-SEOTitle: RC的博客 | Hux Blog
-header-img: img/home-bg.jpg
-email: 676379983@qq.com
-description: "这里是 RC 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
-keyword: "RC, RC, RC, 鬼栈, huxpro, @huxpro, RC的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, React Native, 前端, 设计"
-url: "https://huangxuan.me" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+# Site settings   #站点设置
+title:       #站点设置#站点设置冉畅的博客
+SEOTitle: 冉畅的博客 | 数据结构与算法
+header-img: img/home-bg.jpg页眉图片：img/home-bg.jpg
+email: 676379983@qq.com   电子邮件：676379983@qq.com
+description: "这里是冉畅的个人博客，分享数据结构、算法与编程学习心得 | 专注于栈和队列的讲解"
+keyword: "冉畅, 数据结构, 算法, 栈, 队列, 编程, 技术博客, JavaScript, Python, C++
+url: "https://ranchang199.github.io" # ⚠️ 修改要点：替换成你自己的 GitHub Pages 域名
+baseurl: ""
 
-# Publish posts or collection documents with a future date.
-future: true
+# ... 中间的 Publish posts、Build settings、Markdown settings 保持不变 ...
 
-# SNS settings
-RSS: false
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+# SNS settings   # SNS设置
+RSS: false   RSS:假
+weibo_username:      # 没有可以留空，但要保留这个字段
+zhihu_username:      # 没有可以留空，但要保留这个字段
+github_username: ranchang199   # ⚠️ 修改要点：替换成你自己的 GitHub 用户名
+twitter_username:    # 没有可以留空，但要保留这个字段
 
-# Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
-highlighter: rouge
-permalink: pretty
-paginate: 10
-exclude:
-  [
-    "less",
-    "node_modules",
-    "Gruntfile.js",
-    "package.json",
-    "README.md",
-    "README.zh.md",
-  ]
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN
+# Disqus settings   #磁盘设置
+disqus_username:     # ⚠️ 修改要点：可以暂时留空，等注册了 Disqus 再填
 
-# Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
-plugins: [jekyll-paginate]
+# Analytics settings   # 分析设置
+# 百度统计、Google Analytics 建议都先留空，或移除原有的追踪 ID
 
-# Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
-markdown: kramdown
-kramdown:
-  input: GFM # use Github Flavored Markdown !important
-  syntax_highlighter_opts:
-    span:
-      line_numbers: false
-    block:
-      line_numbers: true
-      start_line: 1
+# Sidebar settings   #侧边栏设置
+sidebar: true
+sidebar-about-description: "程序员冉畅 | 分享数据结构、栈与队列的底层实现与算法题解"
+# ⚠️ 修改要点：放一张正方形的头像图，例如放在 /img/ 目录下命名为 avatar-ranchang.jpg
+sidebar-avatar: /img/avatar-ranchang.jpg
 
-# Disqus settings
-disqus_username: hux
-
-# Netease settings
-netease_comment: false
-
-# Analytics settings
-# Baidu Analytics
-# ba_track_id: [your track id]
-
-# Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-
-# Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
-
-# Featured Tags
-featured-tags: true # whether or not using Feature-Tags
-featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
-
-# Progressive Web Apps
-chrome-tab-theme-color: "#000000"
-service-worker: true
-
-# MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
-
-# Friends
-friends:
-  [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
-  ]
+# Friends（友链）
+friends: []        # ⚠️ 修改要点：先把原来的全部清空，以后自己再加
