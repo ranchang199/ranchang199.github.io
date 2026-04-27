@@ -4,12 +4,14 @@ SEOTitle: 冉畅的博客 | 数据结构与算法
 header-img: img/home-bg.jpg
 email: 676379983@qq.com
 description: "这里是冉畅的个人博客，分享数据结构、算法与编程学习心得 | 专注于栈和队列的讲解"
-keyword: "冉畅, 数据结构, 算法, 栈, 队列, 编程, 技术博客, JavaScript, Python, C++"
+keywords: "冉畅, 数据结构, 算法, 栈, 队列, 编程, 技术博客, JavaScript, Python, C++"
 url: "https://ranchang199.github.io"
 baseurl: ""
 
-# ====== 日期处理 ======
-future: true
+# ====== 全局设置 ======
+future: true                      # 允许显示未来日期的文章
+timezone: Asia/Shanghai           # 设置时区，避免时间混乱
+encoding: utf-8                   # 强制 UTF-8 编码
 
 # ====== 社交链接（留空则不显示）======
 RSS: false
@@ -26,16 +28,17 @@ sidebar: true
 sidebar-about-description: "程序员冉畅 | 分享数据结构、栈与队列的底层实现与算法题解"
 sidebar-avatar: /img/avatar-ranchang.jpg
 
-# ====== 友情链接（空数组表示不显示）======
-friends: []
+# ====== 友情链接 ======
+friends: []                       # 空数组则不显示
 
 # ====== 构建配置 ======
 highlighter: rouge
-permalink: pretty
+permalink: pretty                  # 生成语义化 URL，如 /2025/04/27/标题/
 paginate: 10
 anchorjs: true                     # 为标题自动添加锚点链接
+safe: false                        # GitHub Pages 会强制设为 true，本地调试时 false 更方便
 
-# 排除无关文件，避免被复制到 _site 目录
+# 排除无关文件和文件夹，避免复制到 _site 目录
 exclude:
   - less
   - node_modules
@@ -46,21 +49,34 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - .DS_Store
+  - Thumbs.db
+  - .sass-cache
+  - .jekyll-cache
+  - .idea
+  - .vscode
+  - .gitignore
 
 # 必须的插件（GitHub Pages 白名单内）
 plugins:
   - jekyll-paginate
+  # 可在此添加其他白名单插件，例如：
+  # - jekyll-feed
+  # - jekyll-seo-tag
 
-# ====== Markdown 渲染 ======
+# ====== Markdown 渲染（kramdown）======
 markdown: kramdown
 kramdown:
-  input: GFM
+  input: GFM                       # 启用 GitHub 风格 Markdown
+  syntax_highlighter: rouge
   syntax_highlighter_opts:
     span:
       line_numbers: false
     block:
       line_numbers: true
       start_line: 1
+  auto_ids: true                   # 自动为标题生成 ID 锚点
+  footnote_backlink: "↩"          # 脚注返回链接的符号
 
 # ====== 特色标签 ======
 featured-tags: true
